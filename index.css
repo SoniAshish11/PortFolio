@@ -91,6 +91,15 @@ nav ul li {
     /* padding: 20px; */
 }
 
+@media screen and (min-width: 100px) and (max-width: 520px) {
+    .welcome {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
 .welcome h2 {
     text-align: center;
 }
