@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -9,14 +10,17 @@ body {
     background-image: url(images/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: cover;
+    background-position: center;
     background-origin: content-box;
-    box-sizing: border-box;
+}
+
+div {
+    margin: 2px;
 }
 
 header {
     position: relative;
-    height: 80vh;
+    height: 70vh;
     right: -1.2px;
     width: 100%;
     left: 1px;
@@ -41,6 +45,14 @@ p {
     border-radius: 50%;
 }
 
+header h1:hover,
+span:hover,
+p:hover {
+    transition: all 0.5s;
+    transform: skew(0.9);
+    color: white;
+}
+
 @media screen and (min-width: 100px) and (max-width: 600px) {
     header {
         position: relative;
@@ -56,8 +68,11 @@ p {
     header img {
         position: relative;
         left: 8px;
-        /* object-fit: cover; */
+        top: 12px;
         border-radius: 50%;
+    }
+    header span {
+        font-size: 13px;
     }
 }
 
@@ -72,19 +87,19 @@ p {
     #toggleButton {
         display: block;
         transition: all 0.4s;
-        transform: scale(2);
+        transform: scale(1);
         padding: 12px;
         color: wheat;
-        border-radius: 20px;
+        border-radius: 10px;
         background-color: rgb(72, 70, 70);
-        position: absolute;
-        z-index: 1000;
+        position: relative;
+        z-index: 2;
     }
     #navList {
         display: none;
-        position: absolute;
+        position: relative;
         top: 2px;
-        background-color: rgb(191, 72, 72);
+        /* background-color: rgb(191, 72, 72); */
         width: 100%;
         box-shadow: 0px 4px 8px rgba(130, 87, 87, 0.1);
         padding: 10px;
@@ -104,7 +119,7 @@ nav ul {
 }
 
 nav ul li {
-    box-shadow: inset 4px 23px 20px white;
+    box-shadow: inset 4px 23px 20px rgb(237, 222, 222);
     background-color: rgb(187, 83, 83);
     margin: 1vmax 1vmin;
     opacity: 0.5;
@@ -119,31 +134,37 @@ nav li:hover {
 }
 
 .welcome {
-    border: 0px solid black;
-    box-shadow: inset 2px 22px 22px brown;
+    box-shadow: 0px 0px 12px rgb(98, 83, 83);
     width: 100%;
+    padding: 30px;
 }
 
 @media screen and (min-width: 100px) and (max-width: 600px) {
     .welcome {
+        width: 100%;
         display: flex;
+        padding: 20px;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        box-shadow: 0px 0px 2px rgb(98, 83, 83);
     }
 }
 
 .welcome h2 {
+    margin-top: 1px;
+    font-size: 2em;
     text-align: center;
+    color: rgb(28, 27, 27);
 }
 
 .cards {
     display: inline-block;
-    width: 12rem;
+    width: 12.2rem;
     margin: 50%;
     height: 12rem;
     margin: 12px 20px;
-    padding: 12px 2px;
+    /* padding: 12px 2px; */
 }
 
 .card-body {
@@ -151,35 +172,44 @@ nav li:hover {
     flex-direction: column;
     width: inherit;
     height: inherit;
-    box-shadow: 2px 2px 12px gray;
+    box-shadow: 2px 2px 12px gray, 2px 2px 12px black;
 }
 
 .card-body:hover {
-    animation: 1s;
     transform: translateY(-10px);
     transition: all ease 0.5s;
+    background-color: bisque;
 }
 
 .card-description {
     margin: 1rem 0.3rem;
     font-size: 1em;
-    font-weight: 12;
+    font-weight: 12px;
+    width: fit-content;
 }
 
 .card-para {
     margin: 1rem 0.3rem;
     font-size: 1em;
     font-weight: 12;
+    width: fit-content;
 }
 
 .skills {
-    border: 0px solid black;
-    box-shadow: inset 2px 22px 22px brown;
-    height: 120vh;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0px 0px 2px rgb(98, 83, 83);
 }
 
 .skills h2 {
+    font-size: 2em;
     text-align: center;
+}
+
+.skills h2:hover {
+    color: antiquewhite;
+    text-align: center;
+    transition: all 0.5s;
 }
 
 .img {
@@ -190,14 +220,23 @@ nav li:hover {
 
 .img img {
     width: auto;
-    height: 12vh;
+    height: 14vh;
     padding: 22px;
     box-shadow: 2px 12px 12px rgb(141, 80, 80);
 }
 
+@media screen and (min-width:100px) and (max-width:600px) {
+    .img img {
+        width: auto;
+        height: 14vh;
+        padding: 27px;
+        box-shadow: 2px 12px 12px rgb(141, 80, 80);
+    }
+}
+
 img:hover {
     /* filter: blur(1100%); */
-    transform: scale(0.9);
+    transform: scale(1.2);
     transition: all ease-out 0.4s;
 }
 
@@ -231,10 +270,86 @@ img:hover {
     margin-bottom: 40vh;
 }
 
-footer {
-    margin-top: 100%;
+.about {
+    display: none;
+    margin: 2px 2px 2px 2px;
     width: 100%;
-    height: 20vh;
-    background-color: brown;
-    box-shadow: 2px 2px 12px brown;
+}
+
+.contact {
+    margin: auto;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1%;
+}
+
+.container:hover {
+    transition: all ease-in-out 0.8s;
+    transform: scale(1.1);
+}
+
+.container h2 {
+    font-size: 2em;
+}
+
+.container p {
+    font-size: medium;
+    padding: 12px;
+    font-weight: 800;
+}
+
+.inp {
+    padding: 10px;
+    background-color: rgb(210, 223, 234);
+}
+
+.inp p:hover {
+    color: blue;
+}
+
+.container .inp label {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .inp input {
+    padding: 6px;
+    background-color: rgb(237, 230, 224);
+}
+
+.inp button {
+    padding: 12px;
+    margin: 12px;
+}
+
+.inp button:hover {
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 12px;
+    background-color: burlywood;
+    margin: 12px;
+}
+
+form {
+    max-width: 700px;
+    max-height: 100vh;
+    background-color: rgb(216, 203, 203);
+    border-radius: 10px;
+}
+
+textArea {
+    padding: 5px;
+    margin: 12px;
+    width: 30vw;
+    box-shadow: 2px 2px 2px black;
+}
+
+footer {
+    margin-bottom: 0px;
+    width: 100%;
+    height: 22vh;
+    box-shadow: inset 2px 2px 22px brown;
 }
