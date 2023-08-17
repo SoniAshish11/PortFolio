@@ -12,10 +12,6 @@ body {
     background-position: center;
 }
 
-div {
-    margin: 2px;
-}
-
 header {
     position: relative;
     height: 70vh;
@@ -106,6 +102,34 @@ p:hover {
     }
     #navList.show {
         display: block;
+    }
+}
+
+header h1 {
+    overflow: hidden;
+    border-radius: 0;
+    white-space: wrap;
+    /* Blinking cursor effect */
+    animation: typing 5s steps(40) 1, blink-caret 1s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+        border-radius: 0;
     }
 }
 
@@ -356,6 +380,11 @@ textArea {
     box-shadow: 2px 2px 2px black;
 }
 
+footer {
+    background-color: #333;
+    color: aliceblue;
+}
+
 .footer {
     background-color: #333;
     color: white;
@@ -363,25 +392,16 @@ textArea {
     text-align: center;
 }
 
-
-/* Media query for screens with a maximum width of 768px */
-
 @media (max-width: 768px) {
     .footer {
         padding: 10px;
     }
 }
 
-
-/* Styles for the main content */
-
 .content {
     padding: 20px;
     text-align: center;
 }
-
-
-/* Styles for social links */
 
 .social-links {
     list-style: none;
@@ -398,9 +418,6 @@ textArea {
     color: white;
     text-decoration: none;
 }
-
-
-/* Footer disclaimer */
 
 .footer-disclaimer {
     font-size: 12px;
