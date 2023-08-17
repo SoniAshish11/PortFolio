@@ -14,7 +14,12 @@ For this portfolio project, "VsCode IDE" is used.
     <li>CSS</li>
     <li>JavaScript</li>
   </ul>
-The whole project is created for the completion of task1 given by #bharatIntern for the role of Web developer.
+<h3>How to visit</h3>
+click on the link <a href="https://soniashish11.github.io/PortFolio/">Click me</a>
+
+
+<h3>Thank to </h3>
+The whole project is created for the completion of task 1 given by #bharatIntern for the role of Web developer.
 Sincerely thanks to the Bharat intern.
 best regards to all of you
 Ashish Kumar
