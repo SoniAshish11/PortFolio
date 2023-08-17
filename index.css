@@ -368,8 +368,25 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     max-width: 1200px;
+    width: 100%;
+    margin-left: 100px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 3px auto;
+}
+
+@media screen and (max-width:100px) and (min-width:700px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 600px;
+        width: 30vw;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .footer-content {
+        width: 20vw;
+    }
 }
 
 .footer-section {
