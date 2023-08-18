@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // toggle the navbar
     const navList = document.getElementById("navList");
     const toggleButton = document.getElementById("toggleButton");
-    const head = document.getElementsByClassName("head")
+    const about = document.getElementById("abt")
+    const content = document.getElementById("about-content")
 
 
 
@@ -10,6 +11,13 @@ document.addEventListener("DOMContentLoaded", function() {
         navList.classList.toggle("show");
 
     });
+
+    about.addEventListener("click", function() {
+        content.classList.toggle("show");
+        console.log("show2 created");
+
+    });
+
 
     // email submission
     const form = document.querySelector("form");

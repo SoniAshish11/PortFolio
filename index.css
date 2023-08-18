@@ -40,11 +40,16 @@ p {
 }
 
 header h1:hover,
-span:hover,
-p:hover {
+span:hover {
     transition: all 0.5s;
     transform: skew(0.9);
     color: white;
+}
+
+p:hover {
+    transition: all 0.5s;
+    transform: skew(0.9);
+    color: rgb(72, 119, 248);
 }
 
 @media screen and (min-width: 100px) and (max-width: 600px) {
@@ -74,6 +79,31 @@ p:hover {
     display: none;
 }
 
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 22px #333;
+}
+
+.about p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    font-weight: 200;
+    line-height: 1.5em;
+}
+
+.about button,
+.about a {
+    text-decoration: none;
+    background-color: rgb(208, 82, 82);
+    color: antiquewhite;
+    padding: 7px;
+    border-radius: 12px;
+}
+
 
 /* Style adjustments for small screens */
 
@@ -93,7 +123,6 @@ p:hover {
         display: none;
         position: relative;
         top: 2px;
-        /* background-color: rgb(191, 72, 72); */
         width: 100%;
         box-shadow: 0px 4px 8px rgba(130, 87, 87, 0.1);
         padding: 10px;
@@ -304,7 +333,7 @@ img:hover {
 }
 
 .about {
-    display: none;
+    display: block;
     margin: 2px 2px 2px 2px;
     width: 100%;
 }
@@ -416,6 +445,11 @@ footer {
 
 .social-links a {
     color: white;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: red;
     text-decoration: none;
 }
 
