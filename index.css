@@ -427,6 +427,15 @@ footer {
     }
 }
 
+#experience {
+    margin-top: 10px;
+    font-size: 1rem !important;
+}
+
+#experience .ex-inner {
+    text-align: center;
+}
+
 .content {
     padding: 20px;
     text-align: center;
